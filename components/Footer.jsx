@@ -2,9 +2,10 @@ import React from 'react';
 import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai';
 
 const Footer = () => {
+  let date = new Date;
   return (
     <div className='footer-container'>
-<p>2022 JS Best Store All rights reserverd</p>
+<p> { date.getFullYear() } All rights reserverd</p>
 <p className='icons'>
     <AiFillInstagram />
     <AiOutlineTwitter />

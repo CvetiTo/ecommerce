@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       const params = {
-        line_items: req.body.map((item) => {
+        line_items: JSON.parse(req.body).map((item) => {
           const img = item.image[0].asset._ref;
           const newImage = img.replace('image-', 'https://cdn.sanity.io/images/vauqd6ms/production/').replace('-webp', '.webp');
           //console.log(newImage);
