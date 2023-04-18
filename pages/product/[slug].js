@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
     AiOutlineMinus, AiOutlinePlus, AiFillStar,
-    AiOutlineStar
+    AiOutlineStar, AiOutlineShopping
 } from 'react-icons/ai';
 import { client, urlFor } from '../../lib/client.js';
 import { Product } from '../../components';
@@ -13,8 +13,8 @@ const ProductDetails = ({ product, products }) => {
 
     const [index, setIndex] = useState(0);
     const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
-    const handleBuyNow = () => {
-        onAdd(product, qty);
+    const handleGoShopping = () => {
+        //onAdd(product, qty);
         setShowCart(true);
     }
     return (
@@ -74,7 +74,7 @@ const ProductDetails = ({ product, products }) => {
                             onClick={() => onAdd(product, qty)} >Add to Cart
                         </button>
                         <button type='button' className='buy-now'
-                            onClick={handleBuyNow} >Buy Now
+                            onClick={handleGoShopping} > <AiOutlineShopping size={28} />
                         </button>
                     </div>
                 </div>

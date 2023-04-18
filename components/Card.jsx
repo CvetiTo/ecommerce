@@ -97,7 +97,7 @@ const Card = () => {
             <Link href="/success">
               <button type='button' className='btn'
               onClick={handleCheckout} >
-                Pay
+                Buy Now
               </button>
             </Link>
             </div>
